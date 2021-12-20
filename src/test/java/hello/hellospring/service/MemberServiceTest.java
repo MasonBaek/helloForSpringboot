@@ -40,10 +40,22 @@ class MemberServiceTest {
   }
  @Test
   void findMembers() {
+    // given 
+    
+    // when
+    
+    // then
+    
   }
 
   @Test
   void findOne() {
+    // given
+    
+    // when
+    
+    // then
+    
   }
 
 }
