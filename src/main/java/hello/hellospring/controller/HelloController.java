@@ -12,6 +12,22 @@ public class HelloController {
     model.addAttribute("data", "hello!!!!!!!!");
     return "hello";
   }
+  
+  // http://localhost:8080/hello-mvc?name=spring!!!!!!
+  @GetMapping("hello-mvc")
+  public String helloMvc(@RequestParam("name") String name, Model model) {
+  /*public String helloMvc(@RequestParam(value = "name", required = true) String name, Model model) {*/
+    System.out.println("name -> "+name);
+    model.addAttribute("name", name);
+    return "hello-template";
+  }
+  
+  // http://localhost:8080/hello-string?name=spring
+  @GetMapping("hello-string")
+  @ResponseBody
+  public String helloString(@RequestParam("name") String name) {
+    return "hello"+name;
+  }
 
 
 }
